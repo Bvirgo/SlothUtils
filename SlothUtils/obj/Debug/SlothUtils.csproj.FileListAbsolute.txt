@@ -1,0 +1,6 @@
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\bin\Debug\SlothUtils.dll
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\bin\Debug\SlothUtils.pdb
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\bin\Debug\UnityEngine.dll
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\bin\Debug\UnityEngine.UI.dll
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\obj\Debug\SlothUtils.dll
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\obj\Debug\SlothUtils.pdb

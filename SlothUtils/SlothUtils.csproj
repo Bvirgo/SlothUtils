@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B49023CA-81CB-4E55-8448-169E6278EB88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SlothUtils</RootNamespace>
+    <AssemblyName>SlothUtils</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>libs\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HiDebuger\Debuger.cs" />
+    <Compile Include="HiDebuger\HiDebug.cs" />
+    <Compile Include="HiDebuger\HiDebugView.cs" />
+    <Compile Include="HiDebuger\LogInfo.cs" />
+    <Compile Include="Interface\IMouseCtrl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton\MonoSingleton.cs" />
+    <Compile Include="Singleton\Singleton.cs" />
+    <Compile Include="Singleton\SingletonException.cs" />
+    <Compile Include="Singleton\SingletonLite.cs" />
+    <Compile Include="Utils\Loom.cs" />
+    <Compile Include="Utils\MemoryManager.cs" />
+    <Compile Include="Utils\MethodExpand.cs" />
+    <Compile Include="Utils\FileUtils.cs" />
+    <Compile Include="Utils\MiniEventManager.cs" />
+    <Compile Include="Utils\MonoHelper.cs" />
+    <Compile Include="Utils\MouseManager.cs" />
+    <Compile Include="Utils\ParseUtils.cs" />
+    <Compile Include="Utils\QueueManager.cs" />
+    <Compile Include="Utils\ResourceIOTool.cs" />
+    <Compile Include="Utils\RTAlert.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Utils\SoleUtils.cs" />
+    <Compile Include="Utils\TextureScale.cs" />
+    <Compile Include="Utils\TimeUtils.cs" />
+    <Compile Include="Utils\Watch.cs" />
+    <Compile Include="Utils\XMLUtils.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

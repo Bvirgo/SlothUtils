@@ -1,0 +1,7 @@
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\bin\Release\SlothUtils.dll
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\bin\Release\SlothUtils.pdb
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\bin\Release\UnityEngine.dll
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\bin\Release\UnityEngine.UI.dll
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\obj\Release\SlothUtils.dll
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\obj\Release\SlothUtils.pdb
+E:\VSPro\DLLPro\SlothUtils\SlothUtils\obj\Release\SlothUtils.csprojResolveAssemblyReference.cache
