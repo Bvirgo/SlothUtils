@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace SlothUtils
 {
@@ -200,6 +201,18 @@ namespace SlothUtils
                     list.Add(item);
             }
             return list;
+        }
+        #endregion
+
+        #region object
+        public static string ToJson(this object _obj)
+        {
+            return "";
+        }
+
+        public static T ToObject<T>(this string _strJson)
+        {
+            return default(T);
         }
         #endregion
     }

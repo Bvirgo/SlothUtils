@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace SlothUtils
@@ -117,7 +118,7 @@ namespace SlothUtils
         }
 
         /// <summary>
-        /// Eg:"2,3,4" --><2,3,4>
+        /// Eg:"(2,3,4)" --><2,3,4>
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -125,6 +126,9 @@ namespace SlothUtils
         {
             try
             {
+                value = value.Replace(" ","");
+                value = value.Replace("(","");
+                value = value.Replace(")","");
                 string[] values = value.Split(',');
                 float x = float.Parse(values[0]);
                 float y = float.Parse(values[1]);
@@ -274,6 +278,47 @@ namespace SlothUtils
             double.TryParse(_strValue, out d);
             return d;
         }
+        #endregion
+
+        #region String Extention
+        public static Vector3 ToVector3(this string _str)
+        {
+            return String2Vector3(_str);
+        }
+
+        public static Vector2 ToVector2(this string _str)
+        {
+            return String2Vector2(_str);
+        }
+
+        public static Color ToColor(this string _str)
+        {
+            return String2Color(_str);
+        }
+
+        public static int ToInt(this string _str)
+        {
+            _str = _str.Trim();
+            Regex regex = new Regex(@"^\d+$");
+            int n = int.MinValue;
+            if(regex.IsMatch(_str))
+            {
+                n = int.Parse(_str);
+            }
+            return n;
+        }
+
+        public static float ToFloat(this string _str)
+        {
+            _str = _str.Trim();
+            float f;
+            if (float.TryParse(_str,out f))
+            {
+                return f;
+            }
+            return float.MinValue;
+        }
+        
         #endregion
     }
 }

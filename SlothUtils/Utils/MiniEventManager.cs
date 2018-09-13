@@ -148,7 +148,7 @@ namespace SlothUtils
 			
 			for (int i=0; i<list.Count; i++)
 			{
-				( list[i] as MiniEventListener<MiniEvent> ).OnMMEvent( _newEvent );
+				( list[i] as MiniEventListener<MiniEvent> ).OnMiniEvent( _newEvent );
 			}
 	    }
 
@@ -186,12 +186,12 @@ namespace SlothUtils
 	{
 	    public delegate void Delegate<T>( T eventType );
 
-	    public static void MMEventStartListening<EventType>( this MiniEventListener<EventType> caller ) where EventType : struct
+	    public static void MiniEventStartListening<EventType>( this MiniEventListener<EventType> caller ) where EventType : struct
 	    {
 			MiniEventManager.AddListener<EventType>( caller );
 	    }
 
-		public static void MMEventStopListening<EventType>( this MiniEventListener<EventType> caller ) where EventType : struct
+		public static void MiniEventStopListening<EventType>( this MiniEventListener<EventType> caller ) where EventType : struct
 	    {
 			MiniEventManager.RemoveListener<EventType>( caller );
 	    }
@@ -207,6 +207,6 @@ namespace SlothUtils
 	/// </summary>
 	public interface MiniEventListener<T> : MiniEventListenerBase
 	{
-	    void OnMMEvent( T _eventType );
+	    void OnMiniEvent( T _eventType );
 	}
 }

@@ -65,7 +65,13 @@ namespace SlothUtils
             {
                 m_pLateUpdateActor[i]();
             }
+            
         }
-	}
+
+        public void OnStartCoroutine(IEnumerator _ie)
+        {
+            StartCoroutine(_ie);
+        }
+    }
 }
 
