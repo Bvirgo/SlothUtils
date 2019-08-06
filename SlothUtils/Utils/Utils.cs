@@ -247,6 +247,44 @@ namespace SlothUtils
                 ForAllChildren(childTran.gameObject, operate, false);
             }
         }
+
+        /// <summary>
+        /// 递归向上查找第一个挂有指定脚本的对象；
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="tf"></param>
+        /// <returns></returns>
+        public static GameObject FindComponentInParent<T>(Transform tf) where T : Component
+        {
+            if (tf != null)
+            {
+                var g = tf.GetComponent<T>();
+                if (g != null )
+                {
+                    return g.gameObject;
+                }
+                else if (tf.parent != null)
+                {
+                    var c = tf.parent.GetComponent<T>();
+                    if (c != null)
+                    {
+                        return c.gameObject;
+                    }
+                    else
+                    {
+                        return FindComponentInParent<T>(tf.parent);
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
         #endregion
 
         #region 射线检测相关

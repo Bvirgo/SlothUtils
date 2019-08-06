@@ -82,6 +82,7 @@ namespace SlothUtils
                     FileStream fs = new FileStream(filePath, FileMode.Open);
                     int len = (int)fs.Length;
                     byte[] data = new byte[len];
+                    fs.Read(data, 0, data.Length);
                     fs.Close();
                     return data;
                 }
