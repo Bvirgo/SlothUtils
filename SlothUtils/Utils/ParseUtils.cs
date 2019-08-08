@@ -268,7 +268,7 @@ namespace SlothUtils
         #endregion
 
         #region Double & Float
-        public static double TryParam(this double _dValue, string _strValue)
+        public static double TryParam(string _strValue)
         {
             double d = 0;
             if (string.IsNullOrEmpty(_strValue))
@@ -318,7 +318,9 @@ namespace SlothUtils
             }
             return float.MinValue;
         }
-        
+
         #endregion
+
+       
     }
 }

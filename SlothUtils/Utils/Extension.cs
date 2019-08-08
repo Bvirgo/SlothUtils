@@ -1,11 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SlothUtils
 {
-    public static class MethodExpand
+    /// <summary>
+    /// 扩展定义类
+    /// </summary>
+    public static class Extension
     {
+        #region 对象判空
+        /// <summary>
+        /// 判断对象是否为空，为空返回true
+        /// </summary>
+        /// <param name="data">要验证的对象</param>
+        public static bool IsNullOrEmpty(this object data)
+        {
+            //如果为null
+            if (data == null)
+            {
+                return true;
+            }
+
+            //如果为""
+            if (data.GetType() == typeof(String))
+            {
+                if (string.IsNullOrEmpty(data.ToString().Trim()))
+                {
+                    return true;
+                }
+            }
+
+            //如果为DBNull
+            if (data.GetType() == typeof(DBNull))
+            {
+                return true;
+            }
+
+            //不为空
+            return false;
+        }
+        #endregion
+
         #region Dictionary扩展
         /// <summary>
         /// 尝试直接通过key直接获取TValue的值 : 如果不存在, 返回defaultValue
@@ -157,7 +195,7 @@ namespace SlothUtils
             return newList;
         }
 
-        public static List<T> TryDelete<T>(this List<T> list,T _item)
+        public static List<T> TryDelete<T>(this List<T> list, T _item)
         {
             if (list.Contains(_item))
             {
@@ -205,14 +243,52 @@ namespace SlothUtils
         #endregion
 
         #region object
-        public static string ToJson(this object _obj)
-        {
-            return "";
-        }
 
-        public static T ToObject<T>(this string _strJson)
+        #endregion
+
+        #region String
+        /// <summary>
+        /// 截取指定长度字符串
+        /// </summary>
+        /// <param name="inputString">要处理的字符串</param>
+        /// <param name="len">指定长度</param>
+        /// <returns>返回处理后的字符串</returns>
+        public static string SubString(this string inputString, int len)
         {
-            return default(T);
+            bool isShowFix = false;
+            if (len % 2 == 1)
+            {
+                isShowFix = true;
+                len--;
+            }
+            System.Text.ASCIIEncoding ascii = new System.Text.ASCIIEncoding();
+            int tempLen = 0;
+            string tempString = "";
+            byte[] s = ascii.GetBytes(inputString);
+            for (int i = 0; i < s.Length; i++)
+            {
+                if ((int)s[i] == 63)
+                    tempLen += 2;
+                else
+                    tempLen += 1;
+
+                try
+                {
+                    tempString += inputString.Substring(i, 1);
+                }
+                catch
+                {
+                    break;
+                }
+
+                if (tempLen > len)
+                    break;
+            }
+
+            byte[] mybyte = System.Text.Encoding.Default.GetBytes(inputString);
+            if (isShowFix && mybyte.Length > len)
+                tempString += "…";
+            return tempString;
         }
         #endregion
     }

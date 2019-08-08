@@ -23,12 +23,19 @@ namespace SlothUtils
                 Application.logMessageReceivedThreaded += new Application.LogCallback(HiDebug.LogCallBack);
             }
         }
-
+        /// <summary>
+        /// 是否开启Debuger，带颜色显示到Cosole
+        /// </summary>
+        /// <param name="isOn"></param>
         public static void EnableDebuger(bool isOn)
         {
             _isOnConsole = isOn;
         }
 
+        /// <summary>
+        /// 调试信息是否显示在屏幕上
+        /// </summary>
+        /// <param name="isOn"></param>
         public static void EnableOnScreen(bool isOn)
         {
             _isOnScreen = isOn;
@@ -44,6 +51,10 @@ namespace SlothUtils
             }
         }
 
+        /// <summary>
+        /// 是否自动记录日志信息到本地
+        /// </summary>
+        /// <param name="isOn"></param>
         public static void EnableOnText(bool isOn)
         {
             _isOnText = isOn;

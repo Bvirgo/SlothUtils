@@ -31,6 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\SlothUtils.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,6 +56,8 @@
     <Compile Include="AsyncAwaitUtil\TaskExtensions.cs" />
     <Compile Include="AsyncAwaitUtil\WaitForBackgroundThread.cs" />
     <Compile Include="AsyncAwaitUtil\WaitForUpdate.cs" />
+    <Compile Include="HanZi\EcanConvertToCh.cs" />
+    <Compile Include="HanZi\PinYin.cs" />
     <Compile Include="HiDebuger\Debuger.cs" />
     <Compile Include="HiDebuger\HiDebug.cs" />
     <Compile Include="HiDebuger\HiDebugView.cs" />
@@ -65,6 +68,8 @@
     <Compile Include="Singleton\Singleton.cs" />
     <Compile Include="Singleton\SingletonException.cs" />
     <Compile Include="Singleton\SingletonLite.cs" />
+    <Compile Include="Utils\BoundsHelper.cs" />
+    <Compile Include="Utils\CNDate.cs" />
     <Compile Include="Utils\Loom.cs" />
     <Compile Include="Utils\MemoryManager.cs" />
     <Compile Include="Utils\MethodExpand.cs" />
@@ -74,12 +79,14 @@
     <Compile Include="Utils\MouseManager.cs" />
     <Compile Include="Utils\ParseUtils.cs" />
     <Compile Include="Utils\QueueManager.cs" />
-    <Compile Include="Utils\ResourceIOTool.cs" />
+    <Compile Include="Utils\RMB.cs" />
     <Compile Include="Utils\RTAlert.cs" />
-    <Compile Include="Utils\Utils.cs" />
-    <Compile Include="Utils\SoleUtils.cs" />
+    <Compile Include="Utils\SecurityHelper.cs" />
+    <Compile Include="Utils\U3DUtils.cs" />
     <Compile Include="Utils\TextureScale.cs" />
     <Compile Include="Utils\TimeUtils.cs" />
+    <Compile Include="Utils\ValidatorHelper.cs" />
+    <Compile Include="Utils\VerifyCodeRand.cs" />
     <Compile Include="Utils\Watch.cs" />
     <Compile Include="Utils\XMLUtils.cs" />
   </ItemGroup>

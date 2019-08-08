@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace SlothUtils
 {
+    /// <summary>
+    /// 一个GUI消息弹出框，带确认回调
+    /// </summary>
     public class RTAlert : MonoSingleton<RTAlert>
     {
         private Rect mRect;

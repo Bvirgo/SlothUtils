@@ -1,0 +1,1617 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SlothUtils</name>
+    </assembly>
+    <members>
+        <member name="M:SlothUtils.AwaitExtensions.Do(System.Action{System.Action{System.Object}})">
+            <summary>
+            async 兼容 回调
+            </summary>
+            <param name="done"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.AwaitExtensions.Do(SlothUtils.AsyncAction)">
+            <summary>
+            async 兼容 回调
+            </summary>
+            <param name="aa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.HiDebug.EnableDebuger(System.Boolean)">
+            <summary>
+            是否开启Debuger，带颜色显示到Cosole
+            </summary>
+            <param name="isOn"></param>
+        </member>
+        <member name="M:SlothUtils.HiDebug.EnableOnScreen(System.Boolean)">
+            <summary>
+            调试信息是否显示在屏幕上
+            </summary>
+            <param name="isOn"></param>
+        </member>
+        <member name="M:SlothUtils.HiDebug.EnableOnText(System.Boolean)">
+            <summary>
+            是否自动记录日志信息到本地
+            </summary>
+            <param name="isOn"></param>
+        </member>
+        <member name="T:SlothUtils.IMouseCtrl">
+            <summary>
+            可接收鼠标操控对象
+            </summary>
+        </member>
+        <member name="T:SlothUtils.MonoSingleton`1">
+            <summary>
+            DDOL singleton.
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MonoSingleton`1.OnApplicationQuit">
+            <summary>
+            Raises the application quit event.
+            </summary>
+        </member>
+        <member name="T:SlothUtils.Singleton`1">
+            <summary>
+            Generic C# singleton.
+            </summary>
+        </member>
+        <member name="F:SlothUtils.Singleton`1._Instance">
+            <summary>
+            The m_ instance.
+            </summary>
+        </member>
+        <member name="P:SlothUtils.Singleton`1.Instance">
+            <summary>
+            Gets the instance.
+            </summary>
+            <value>The instance.</value>
+        </member>
+        <member name="M:SlothUtils.Singleton`1.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SlothUtils.Singleton`1.Init" -->
+        <member name="M:SlothUtils.SingletonException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SlothUtils.SingletonException"/> class.
+            </summary>
+            <param name="msg">Message.</param>
+        </member>
+        <member name="M:SlothUtils.BoundsHelper.GetBounds(System.Collections.Generic.List{UnityEngine.GameObject})">
+            <summary>
+            获取对象列表的外包围盒
+            </summary>
+            <param name="sceneObjects"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.BoundsHelper.GetBounds(UnityEngine.Transform)">
+            <summary>
+            获取对象包围盒
+            </summary>
+            <param name="transform"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.BoundsHelper.GetCharacterBounds(UnityEngine.Transform)">
+            <summary>
+            获取角色模型的包围盒(Bounds)
+            </summary>
+            <param name="root">根节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.BoundsHelper.GetBoundsVectors(UnityEngine.Bounds,System.Single)">
+            <summary>
+            以左上顶点为第一个点，逆时针记录
+            </summary>
+            <param name="bos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.BoundsHelper.GetPanelCenterVecs(UnityEngine.Bounds)">
+            <summary>
+            上下，左右，前后 六面中心点
+            </summary>
+            <param name="bos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.BoundsHelper.IsBoundsConflict(System.Collections.Generic.List{UnityEngine.Bounds},UnityEngine.Bounds)">
+            <summary>
+            判断一个Bound和其他Bounds是否有重叠的部分
+            </summary>
+            <param name="existBounds"></param>
+            <param name="newBound"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.BoundsHelper.GetLookDownVecs(UnityEngine.Bounds)">
+            <summary>
+            俯视四个顶点
+            </summary>
+            <param name="bos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.BoundsHelper.AddCollider(UnityEngine.GameObject)">
+            <summary>
+            根据bounds添加适配BoxCollider
+            </summary>
+            <param name="go"></param>
+        </member>
+        <member name="F:SlothUtils.MemoryManager.s_allowDynamicLoad">
+            <summary>
+            是否允许动态加载
+            </summary>
+        </member>
+        <member name="F:SlothUtils.MemoryManager.s_MaxMemoryUse">
+            <summary>
+            最大允许的内存使用量
+            </summary>
+        </member>
+        <member name="F:SlothUtils.MemoryManager.s_MaxHeapMemoryUse">
+            <summary>
+            最大允许的堆内存使用量
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MemoryManager.OnRegister(System.Action)">
+            <summary>
+            Register Handler For Free Memory
+            </summary>
+            <param name="_cbFree"></param>
+        </member>
+        <member name="M:SlothUtils.MemoryManager.FreeMemory">
+            <summary>
+            释放内存
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MemoryManager.FreeHeapMemory">
+            <summary>
+            释放堆内存
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MemoryManager.MonitorMemorySize">
+            <summary>
+            用于监控内存
+            </summary>
+            <param name="tag"></param>
+        </member>
+        <member name="M:SlothUtils.MethodExpand.TryGetReturnValue``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>
+            尝试直接通过key直接获取TValue的值 : 如果不存在, 返回defaultValue
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MethodExpand.ForceGetValueOrDefault``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>
+            尝试获取给定key的value值,如果没有key,则建立默认value的指定key pair
+            </summary>
+            <returns>获取到的value值或默认value值</returns>
+        </member>
+        <member name="M:SlothUtils.MethodExpand.TryAddNoReplace``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>
+            尝试将键和值添加到字典中：如果不存在，才添加；存在，不添加也不抛导常
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MethodExpand.AddOrReplace``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>
+            将键和值添加或替换到字典中：如果不存在，则添加；存在，则替换
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MethodExpand.AddRange``2(System.Collections.Generic.Dictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}},System.Boolean)">
+            <summary>
+            向字典中批量添加键值对
+            </summary>
+            <param name="isReplaceExisted">如果已存在，是否替换</param>
+        </member>
+        <member name="M:SlothUtils.MethodExpand.RemoveRange``2(System.Collections.Generic.Dictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            <summary>
+            向字典中批量删除键值对
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MethodExpand.AddToList``2(System.Collections.Generic.Dictionary{``0,System.Collections.Generic.List{``1}},``0,``1)">
+            <summary>添加进key-value(list)型字典, 并确保列表非空与不重复添加</summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="dic"></param>
+            <param name="key"></param>
+            <param name="tar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.MethodExpand.AddRep``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>替换/添加, 如果字典中已有则替换值</summary>
+        </member>
+        <member name="M:SlothUtils.FileUtils.CreatFilePath(System.String)">
+            <summary>
+            判断有没有这个文件路径，如果没有则创建它(路径会去掉文件名)
+            </summary>
+            <param name="filepath"></param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.CreatPath(System.String)">
+            <summary>
+            判断有没有这个路径，如果没有则创建它
+            </summary>
+            <param name="filepath"></param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.CopyDirectory(System.String,System.String)">
+            <summary>
+            复制文件夹（及文件夹下所有子文件夹和文件）
+            </summary>
+            <param name="sourcePath">待复制的文件夹路径</param>
+            <param name="destinationPath">目标路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.SafeDeleteDirectory(System.String)">
+            <summary>
+            删除所有可以删除的文件
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.SafeCopyDirectory(System.String,System.String)">
+            <summary>
+            复制所有可以复制的文件夹（及文件夹下所有子文件夹和文件）
+            </summary>
+            <param name="sourcePath">待复制的文件夹路径</param>
+            <param name="destinationPath">目标路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.ConvertFileEncoding(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            文件编码转换
+            </summary>
+            <param name="sourceFile">源文件</param>
+            <param name="destFile">目标文件，如果为空，则覆盖源文件</param>
+            <param name="targetEncoding">目标编码</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetEncodingType(System.String)">
+            <summary> 
+            给定文件的路径，读取文件的二进制数据，判断文件的编码类型 
+            </summary> 
+            <param name="FILE_NAME">文件路径</param> 
+            <returns>文件的编码类型</returns> 
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetEncodingType(System.IO.FileStream)">
+            <summary> 
+            通过给定的文件流，判断文件的编码类型 
+            </summary> 
+            <param name="fs">文件流</param> 
+            <returns>文件的编码类型</returns> 
+        </member>
+        <member name="M:SlothUtils.FileUtils.IsUTF8Bytes(System.Byte[])">
+            <summary> 
+            判断是否是不带 BOM 的 UTF8 格式 
+            </summary> 
+            <param name="data"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:SlothUtils.FileUtils.RecursionFileExecute(System.String,System.String,SlothUtils.FileUtils.FileExecuteHandle)">
+            <summary>
+            递归处理某路径及其他的子目录
+            </summary>
+            <param name="path">目标路径</param>
+            <param name="expandName">要处理的特定拓展名</param>
+            <param name="handle">处理函数</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetDirectoryName(System.String)">
+            <summary>
+            获取路径目录，除去文件名
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetStandardPath(System.String)">
+            <summary>
+            路径转为标准格式路径
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFileNameByPath(System.String,System.Boolean)">
+            <summary>
+            通过全路径，获取文件名（去掉后缀）
+            </summary>
+            <param name="path"></param>
+            <param name="needPostfix">是否需要带后缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFilePostfix(System.String)">
+            <summary>获取文件名后缀</summary>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFilePrefix(System.String)">
+            <summary>
+            去掉文件名后缀
+            </summary>
+            <param name="_strName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.ReadTextFile(System.String)">
+            <summary>
+            读取文本：PC模式，移动模式
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.SaveInfo(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            带时间戳保存
+            </summary>
+            <param name="_strMsg"></param>
+            <param name="_strFileName"></param>
+            <param name="_strType"></param>
+            <param name="_bAppend"></param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.SimpleSaveInfo(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            不加时间戳
+            </summary>
+            <param name="_strMsg"></param>
+            <param name="_strFileName"></param>
+            <param name="_strType"></param>
+            <param name="_bAppend"></param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetDataPath">
+            <summary>
+            获取平台dataPath
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.IsExistDirectory(System.String)">
+            <summary>
+            检测指定目录是否存在
+            </summary>
+            <param name="directoryPath">目录的绝对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.IsExistFile(System.String)">
+            <summary>
+            检测指定文件是否存在,如果存在则返回true。
+            </summary>
+            <param name="filePath">文件的绝对路径</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFileNames(System.String)">
+            <summary>
+            获取指定目录中所有文件列表
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetDirectories(System.String)">
+            <summary>
+            获取指定目录中所有子目录列表,若要搜索嵌套的子目录列表,请使用重载方法.
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFileNames(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定目录及子目录中所有文件列表
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
+            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param>
+            <param name="isSearchChild">是否搜索子目录</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.IsEmptyDirectory(System.String)">
+            <summary>
+            检测指定目录是否为空
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.Contains(System.String,System.String)">
+            <summary>
+            检测指定目录中是否存在指定的文件,若要搜索子目录请使用重载方法.
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
+            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.Contains(System.String,System.String,System.Boolean)">
+            <summary>
+            检测指定目录中是否存在指定的文件
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
+            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param> 
+            <param name="isSearchChild">是否搜索子目录</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetDateDir">
+            <summary>
+            根据时间得到目录名yyyyMMdd
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetDateFile">
+            <summary>
+            根据时间得到文件名HHmmssff
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.CopyFolder(System.String,System.String)">
+            <summary>
+            复制文件夹(递归)
+            </summary>
+            <param name="varFromDirectory">源文件夹路径</param>
+            <param name="varToDirectory">目标文件夹路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.ExistsFile(System.String)">
+            <summary>
+            检查文件,如果文件不存在则创建  
+            </summary>
+            <param name="FilePath">路径,包括文件名</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.DeleteFolderFiles(System.String,System.String)">
+            <summary>
+            删除指定文件夹对应其他文件夹里的文件
+            </summary>
+            <param name="varFromDirectory">指定文件夹路径</param>
+            <param name="varToDirectory">对应其他文件夹路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFileName(System.String)">
+            <summary>
+            从文件的绝对路径中获取文件名( 包含扩展名 )
+            </summary>
+            <param name="filePath">文件的绝对路径</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.CreateDirectory(System.String)">
+            <summary>
+            创建一个目录
+            </summary>
+            <param name="directoryPath">目录的绝对路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.CreateFile(System.String)">
+            <summary>
+            创建一个文件。
+            </summary>
+            <param name="filePath">文件的绝对路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.CreateFile(System.String,System.Byte[])">
+            <summary>
+            创建一个文件,并将字节流写入文件。
+            </summary>
+            <param name="filePath">文件的绝对路径</param>
+            <param name="buffer">二进制流数据</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetLineCount(System.String)">
+            <summary>
+            获取文本文件的行数
+            </summary>
+            <param name="filePath">文件的绝对路径</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFileSize(System.String)">
+            <summary>
+            获取一个文件的长度,单位为Byte
+            </summary>
+            <param name="filePath">文件的绝对路径</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetDirectories(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定目录及子目录中所有子目录列表
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+            <param name="searchPattern">模式字符串，"*"代表0或N个字符，"?"代表1个字符。
+            范例："Log*.xml"表示搜索所有以Log开头的Xml文件。</param>
+            <param name="isSearchChild">是否搜索子目录</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.WriteText(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            向文本文件中写入内容
+            </summary>
+            <param name="filePath">文件的绝对路径</param>
+            <param name="text">写入的内容</param>
+            <param name="encoding">编码</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.AppendText(System.String,System.String)">
+            <summary>
+            向文本文件的尾部追加内容
+            </summary>
+            <param name="filePath">文件的绝对路径</param>
+            <param name="content">写入的内容</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.Copy(System.String,System.String)">
+            <summary>
+            将源文件的内容复制到目标文件中
+            </summary>
+            <param name="sourceFilePath">源文件的绝对路径</param>
+            <param name="destFilePath">目标文件的绝对路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFileNameNoExtension(System.String)">
+            <summary>
+            从文件的绝对路径中获取文件名( 不包含扩展名 )
+            </summary>
+            <param name="filePath">文件的绝对路径</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetExtension(System.String)">
+            <summary>
+            从文件的绝对路径中获取扩展名
+            </summary>
+            <param name="filePath">文件的绝对路径</param>        
+        </member>
+        <member name="M:SlothUtils.FileUtils.ClearFile(System.String)">
+            <summary>
+            清空文件内容
+            </summary>
+            <param name="filePath">文件的绝对路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.DeleteDirectory(System.String)">
+            <summary>
+            删除指定目录及其所有子目录
+            </summary>
+            <param name="directoryPath">指定目录的绝对路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetPostfixStr(System.String)">
+            <summary>
+            取后缀名
+            </summary>
+            <param name="filename">文件名</param>
+            <returns>.gif|.html格式</returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.WriteFile(System.String,System.String)">
+            <summary>
+            写文件
+            </summary>
+            <param name="Path">文件路径</param>
+            <param name="Strings">文件内容</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.ReadFile(System.String)">
+            <summary>
+            读文件
+            </summary>
+            <param name="Path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.FileAdd(System.String,System.String)">
+            <summary>
+            追加文件
+            </summary>
+            <param name="Path">文件路径</param>
+            <param name="strings">内容</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.FileCoppy(System.String,System.String)">
+            <summary>
+            拷贝文件
+            </summary>
+            <param name="OrignFile">原始文件</param>
+            <param name="NewFile">新文件路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.FileDel(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="Path">路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.FileMove(System.String,System.String)">
+            <summary>
+            移动文件
+            </summary>
+            <param name="OrignFile">原始路径</param>
+            <param name="NewFile">新路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.FolderCreate(System.String,System.String)">
+            <summary>
+            在当前目录下创建目录
+            </summary>
+            <param name="OrignFolder">当前目录</param>
+            <param name="NewFloder">新目录</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.FolderCreate(System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="Path"></param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.DeleteFolder(System.String)">
+            <summary>
+            递归删除文件夹目录及文件
+            </summary>
+            <param name="dir"></param>  
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.CopyDir(System.String,System.String)">
+            <summary>
+            指定文件夹下面的所有内容copy到目标文件夹下面
+            </summary>
+            <param name="srcPath">原始路径</param>
+            <param name="aimPath">目标文件夹</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFoldAll(System.String)">
+            <summary>
+            获取指定文件夹下所有子目录及文件
+            </summary>
+            <param name="Path">详细路径</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.ListTreeShow(System.IO.DirectoryInfo,System.Int32,System.String)">
+            <summary>
+            获取指定文件夹下所有子目录及文件函数
+            </summary>
+            <param name="theDir">指定目录</param>
+            <param name="nLevel">默认起始值,调用时,一般为0</param>
+            <param name="Rn">用于迭加的传入值,一般为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFoldAll(System.String,System.String,System.String)">
+             <summary>
+             获取指定文件夹下所有子目录及文件(下拉框形)
+             </summary>
+             <param name="Path">详细路径</param>
+            <param name="DropName">下拉列表名称</param>
+            <param name="tplPath">默认选择模板名称</param>
+        </member>
+        <member name="M:SlothUtils.FileUtils.ListTreeShow(System.IO.DirectoryInfo,System.Int32,System.String,System.String)">
+            <summary>
+            获取指定文件夹下所有子目录及文件函数
+            </summary>
+            <param name="theDir">指定目录</param>
+            <param name="nLevel">默认起始值,调用时,一般为0</param>
+            <param name="Rn">用于迭加的传入值,一般为空</param>
+            <param name="tplPath">默认选择模板名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetDirectoryLength(System.String)">
+            <summary>
+            获取文件夹大小
+            </summary>
+            <param name="dirPath">文件夹路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.FileUtils.GetFileAttibe(System.String)">
+            <summary>
+            获取指定文件详细属性
+            </summary>
+            <param name="filePath">文件详细路径</param>
+            <returns></returns>
+        </member>
+        <member name="T:SlothUtils.MMGameEvent">
+            <summary>
+            MMGameEvents are used throughout the game for general game events (game started, game ended, life lost, etc.)
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:SlothUtils.MiniEventManager" -->
+        <member name="M:SlothUtils.MiniEventManager.AddListener``1(SlothUtils.MiniEventListener{``0})">
+            <summary>
+            Adds a new subscriber to a certain event.
+            </summary>
+            <param name="_listener">listener.</param>
+            <typeparam name="MiniEvent">The event type.</typeparam>
+        </member>
+        <member name="M:SlothUtils.MiniEventManager.RemoveListener``1(SlothUtils.MiniEventListener{``0})">
+            <summary>
+            Removes a subscriber from a certain event.
+            </summary>
+            <param name="_listener">listener.</param>
+            <typeparam name="MiniMEvent">The event type.</typeparam>
+        </member>
+        <member name="M:SlothUtils.MiniEventManager.TriggerEvent``1(``0)">
+            <summary>
+            Triggers an event. All instances that are subscribed to it will receive it (and will potentially act on it).
+            </summary>
+            <param name="_newEvent">The event to trigger.</param>
+            <typeparam name="MiniEvent">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:SlothUtils.MiniEventManager.SubscriptionExists(System.Type,SlothUtils.MiniEventListenerBase)">
+            <summary>
+            Checks if there are subscribers for a certain type of events
+            </summary>
+            <returns><c>true</c>, if exists was subscriptioned, <c>false</c> otherwise.</returns>
+            <param name="_type">Type.</param>
+            <param name="_receiver">Receiver.</param>
+        </member>
+        <member name="T:SlothUtils.EventRegister">
+            <summary>
+            Static class that allows any class to start or stop listening to events
+            </summary>
+        </member>
+        <member name="T:SlothUtils.MiniEventListenerBase">
+            <summary>
+            Event listener basic interface
+            </summary>
+        </member>
+        <member name="T:SlothUtils.MiniEventListener`1">
+            <summary>
+            A public interface you'll need to implement for each type of event you want to listen to.
+            </summary>
+        </member>
+        <member name="T:SlothUtils.MouseEvent">
+            <summary>
+            鼠标事件定义
+            </summary>
+        </member>
+        <member name="T:SlothUtils.MouseManager">
+            <summary>
+            基于IMouseCtr接口的鼠标操作消息分发中心
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MouseManager.CheckMouse">
+            <summary>
+            鼠标操作检测
+            </summary>
+        </member>
+        <member name="M:SlothUtils.MouseManager.IsMousePointOn``1(UnityEngine.Vector3@)">
+            <summary>
+            判断鼠标是否在IMouseCtrl对象上
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="worldPos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.MouseManager.CheckMouseBehavier(System.Int32,UnityEngine.Vector3@,UnityEngine.Vector3@,SlothUtils.IMouseCtrl,System.Single@,System.Single@)">
+            <summary>
+            鼠标按键操作检测
+            </summary>
+            <param name="mouseBtn"></param>
+            <param name="screenP"></param>
+            <param name="worldP"></param>
+            <param name="mc"></param>
+            <param name="time"></param>
+            <param name="doubleTimer"></param>
+        </member>
+        <member name="M:SlothUtils.ParseUtils.String2FloatArray(System.String)">
+            <summary>
+            Eg:"5.4|3.2|2.3" --> List[5.4,3.2,2.3]
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ParseUtils.String2BoolArray(System.String)">
+            <summary>
+            Eg:"true|false" --> List[true,false]
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SlothUtils.ParseUtils.String2Vector2(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:SlothUtils.ParseUtils.String2Vector2Array(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:SlothUtils.ParseUtils.String2Vector3(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:SlothUtils.ParseUtils.String2Vector3Array(System.String)" -->
+        <member name="M:SlothUtils.ParseUtils.String2Color(System.String)">
+            <summary>
+            Eg:"12,34,225" -->Color(12,34,225)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SlothUtils.ParseUtils.StringToVector4(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:SlothUtils.ParseUtils.StringToQuaternion(System.String)" -->
+        <member name="M:SlothUtils.ParseUtils.String2IntArray(System.String)">
+            <summary>
+            Eg:"1 | 2" -->List[1,2]
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SlothUtils.QueueManager">
+            <summary>
+            Queue Manager
+            </summary>
+        </member>
+        <member name="F:SlothUtils.QueueManager.m_nMax">
+            <summary>
+            Runing Count
+            </summary>
+        </member>
+        <member name="M:SlothUtils.QueueManager.Add(SlothUtils.AsyncTask)">
+            <summary>
+            New Task
+            </summary>
+            <param name="_task"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SlothUtils.QueueManager.Add(System.Action{System.Action},SlothUtils.TaskPriority,System.String)" -->
+        <member name="M:SlothUtils.QueueManager.Insert(SlothUtils.AsyncTask)">
+            <summary>
+            Insert New Task
+            </summary>
+            <param name="_task"></param>
+        </member>
+        <member name="M:SlothUtils.QueueManager.SortTask(SlothUtils.AsyncTask,SlothUtils.AsyncTask)">
+            <summary>
+            Sort By Task Priority
+            </summary>
+            <param name="_q1"></param>
+            <param name="_q2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.QueueManager.Cancel(SlothUtils.AsyncTask)">
+            <summary>
+            Remove Waiting Task
+            </summary>
+            <param name="_task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.QueueManager.ClearWaitList">
+            <summary>
+            Clear
+            </summary>
+        </member>
+        <member name="M:SlothUtils.QueueManager.GetWaitList">
+            <summary>
+            Get Waiting List
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.QueueManager.GetWaitLength">
+            <summary>
+            Get The Length of  Waiting List 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.QueueManager.TaskLoop">
+            <summary>
+            Go
+            </summary>
+        </member>
+        <member name="T:SlothUtils.Rmb">
+            <summary> 
+            Rmb 的摘要说明。 
+            </summary> 
+        </member>
+        <member name="M:SlothUtils.Rmb.CmycurD(System.Decimal)">
+            <summary> 
+            转换人民币大小金额 
+            </summary> 
+            <param name="num">金额</param> 
+            <returns>返回大写形式</returns> 
+        </member>
+        <member name="M:SlothUtils.Rmb.CmycurD(System.String)">
+            <summary> 
+            一个重载，将字符串先转换成数字在调用CmycurD(decimal num) 
+            </summary> 
+            <param name="num">用户输入的金额，字符串形式未转成decimal</param> 
+            <returns></returns> 
+        </member>
+        <member name="T:SlothUtils.RTAlert">
+            <summary>
+            一个GUI消息弹出框，带确认回调
+            </summary>
+        </member>
+        <member name="T:SlothUtils.SecurityHelper">
+            <summary>
+            安全助手
+            </summary>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.HashEncrypt(System.Security.Cryptography.HashAlgorithm,System.String,System.Text.Encoding)">
+            <summary>
+            哈希加密算法
+            </summary>
+            <param name="hashAlgorithm"> 所有加密哈希算法实现均必须从中派生的基类 </param>
+            <param name="input"> 待加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.VerifyHashValue(System.Security.Cryptography.HashAlgorithm,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            验证哈希值
+            </summary>
+            <param name="hashAlgorithm"> 所有加密哈希算法实现均必须从中派生的基类 </param>
+            <param name="unhashedText"> 未加密的字符串 </param>
+            <param name="hashedText"> 经过加密的哈希值 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.MD5Encrypt(System.String,System.Text.Encoding)">
+            <summary>
+            MD5 加密
+            </summary>
+            <param name="input"> 待加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.VerifyMD5Value(System.String,System.Text.Encoding)">
+            <summary>
+            验证 MD5 值
+            </summary>
+            <param name="input"> 未加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.SHA1Encrypt(System.String,System.Text.Encoding)">
+            <summary>
+            SHA1 加密
+            </summary>
+            <param name="input"> 要加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.VerifySHA1Value(System.String,System.Text.Encoding)">
+            <summary>
+            验证 SHA1 值
+            </summary>
+            <param name="input"> 未加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.SHA256Encrypt(System.String,System.Text.Encoding)">
+            <summary>
+            SHA256 加密
+            </summary>
+            <param name="input"> 要加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.VerifySHA256Value(System.String,System.Text.Encoding)">
+            <summary>
+            验证 SHA256 值
+            </summary>
+            <param name="input"> 未加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.SHA384Encrypt(System.String,System.Text.Encoding)">
+            <summary>
+            SHA384 加密
+            </summary>
+            <param name="input"> 要加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.VerifySHA384Value(System.String,System.Text.Encoding)">
+            <summary>
+            验证 SHA384 值
+            </summary>
+            <param name="input"> 未加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.SHA512Encrypt(System.String,System.Text.Encoding)">
+            <summary>
+            SHA512 加密
+            </summary>
+            <param name="input"> 要加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.VerifySHA512Value(System.String,System.Text.Encoding)">
+            <summary>
+            验证 SHA512 值
+            </summary>
+            <param name="input"> 未加密的字符串 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.HMACSMD5Encrypt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            HMAC-MD5 加密
+            </summary>
+            <param name="input"> 要加密的字符串 </param>
+            <param name="key"> 密钥 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.HMACSHA1Encrypt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            HMAC-SHA1 加密
+            </summary>
+            <param name="input"> 要加密的字符串 </param>
+            <param name="key"> 密钥 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.HMACSHA256Encrypt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            HMAC-SHA256 加密
+            </summary>
+            <param name="input"> 要加密的字符串 </param>
+            <param name="key"> 密钥 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.HMACSHA384Encrypt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            HMAC-SHA384 加密
+            </summary>
+            <param name="input"> 要加密的字符串 </param>
+            <param name="key"> 密钥 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.HMACSHA512Encrypt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            HMAC-SHA512 加密
+            </summary>
+            <param name="input"> 要加密的字符串 </param>
+            <param name="key"> 密钥 </param>
+            <param name="encoding"> 字符编码 </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.DESEncrypt(System.String,System.String)">
+            <summary>
+            DES 加密
+            </summary>
+            <param name="input"> 待加密的字符串 </param>
+            <param name="key"> 密钥（8位） </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.DESDecrypt(System.String,System.String)">
+            <summary>
+            DES 解密
+            </summary>
+            <param name="input"> 待解密的字符串 </param>
+            <param name="key"> 密钥（8位） </param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.GenerateRSAKeys(System.String@,System.String@)">
+            <summary>
+            生成 RSA 公钥和私钥
+            </summary>
+            <param name="publicKey"> 公钥 </param>
+            <param name="privateKey"> 私钥 </param>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.RSAEncrypt(System.String,System.String)">
+            <summary>
+            RSA 加密
+            </summary>
+            <param name="publickey"> 公钥 </param>
+            <param name="content"> 待加密的内容 </param>
+            <returns> 经过加密的字符串 </returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.RSADecrypt(System.String,System.String)">
+            <summary>
+            RSA 解密
+            </summary>
+            <param name="privatekey"> 私钥 </param>
+            <param name="content"> 待解密的内容 </param>
+            <returns> 解密后的字符串 </returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.EncodeBase64SafeString(System.String)">
+            <summary>
+            字符串编码
+            </summary>
+            <param name="text">待编码的文本字符串</param>
+            <returns>编码的文本字符串.</returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.DecodeBase64SafeString(System.String)">
+            <summary>
+            解码安全的URL文本字符串的Base64
+            </summary>
+            <param name="secureUrlBase64">Base64编码字符串安全的URL.</param>
+            <returns>Cadena de texto decodificada.</returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.HmacSha1Sign(System.String,System.String)">
+            <summary>
+            针对URL的HMAC-SHA1加密算法
+            </summary>
+            <param name="secret">密钥</param>
+            <param name="strOrgData">源文</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.Object2Bytes(System.Object)">
+            <summary>
+            Object转Bytes 
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.StringMD5(System.String)">
+            <summary>
+            获取字符串MD5码
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.GetCRC(System.Byte[])">
+            <summary>
+            流，计算Crc 
+            这个和Crc32.cs中的方法结果一致！
+            </summary>
+            <param name="pBuf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.GetFileMD5(System.String)">
+            <summary>
+            获取指定文件MD5
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.GetMD5(System.Object)">
+            <summary>
+            获取对象MD5
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.GetMD5(System.Byte[])">
+            <summary>
+            获取bytesMD5
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.GetHashMD5(System.Byte[])">
+            <summary>
+            获取bytes数据的Hash值
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.Encrypt(System.String)">
+            <summary> /// 加密字符串   
+            </summary>  
+            <param name="str">要加密的字符串</param>  
+            <returns>加密后的字符串</returns>  
+        </member>
+        <member name="M:SlothUtils.SecurityHelper.Decrypt(System.String)">
+            <summary>  
+            解密字符串   
+            </summary>  
+            <param name="str">要解密的字符串</param>  
+            <returns>解密后的字符串</returns>  
+        </member>
+        <member name="M:SlothUtils.U3DUtils.AddOrReplaceBoxCollider(UnityEngine.GameObject)">
+            <summary>
+            添加Collider
+            </summary>
+            <param name="decorateObj"></param>
+        </member>
+        <member name="M:SlothUtils.U3DUtils.SetDefaultTransfromWithParent(UnityEngine.Transform,UnityEngine.Transform)">
+            <summary>
+            UGUI设置默认Transfrom
+            </summary>
+            <param name="child"></param>
+            <param name="parent"></param>
+        </member>
+        <member name="M:SlothUtils.U3DUtils.SetTransformExpandParent(UnityEngine.Transform)">
+            <summary>
+            UGUI子对象平铺父对象
+            </summary>
+            <param name="go"></param>
+        </member>
+        <member name="M:SlothUtils.U3DUtils.GetAllChilds(UnityEngine.Transform)">
+            <summary>
+            获取所有的子对象,包括自身
+            </summary>
+            <param name="go"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.U3DUtils.IsUI">
+            <summary>
+            鼠标是否在UGUI上
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.U3DUtils.IsCurrentUI(System.String)">
+            <summary>
+            是否是指定UI界面
+            </summary>
+            <param name="uiName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.U3DUtils.IsEquals(System.Single,System.Single)">
+            <summary>
+            浮点数等值判断
+            </summary>
+            <param name="double1"></param>
+            <param name="double2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.U3DUtils.ClickGround(UnityEngine.Vector3@,System.String)">
+            <summary>
+            点击地面，获取坐标
+            </summary>
+            <param name="pos">获取点击到地面上的世界坐标</param>
+            <param name="groundName">地面层名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.Time2String(System.String)">
+            <summary>
+            获取当前时间
+            </summary>
+            <param name="formart"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.OnGetUnixTimeByCurDataTime">
+            <summary>
+            Get Unix Time By Current Data Time
+            </summary>
+            <returns>double</returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.OnGetUnixTimeByDataTime(System.DateTime)">
+            <summary>
+            Get Unix Time
+            </summary>
+            <param name="_t"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SlothUtils.TimeUtils.OnParseTimeSeconds(System.Int64)" -->
+        <member name="M:SlothUtils.TimeUtils.GetFormatDate(System.DateTime,System.Char)">
+            <summary>
+            将时间格式化成 年月日 的形式,如果时间为null，返回当前系统时间
+            </summary>
+            <param name="dt">年月日分隔符</param>
+            <param name="Separator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetFormatTime(System.DateTime,System.Char)">
+            <summary>
+            将时间格式化成 时分秒 的形式,如果时间为null，返回当前系统时间
+            </summary>
+            <param name="dt"></param>
+            <param name="Separator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.SecondToMinute(System.Int32)">
+            <summary>
+            把秒转换成分钟
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetMonthLastDate(System.Int32,System.Int32)">
+            <summary>
+            返回某年某月最后一天
+            </summary>
+            <param name="year">年份</param>
+            <param name="month">月份</param>
+            <returns>日</returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.DateDiff2(System.DateTime,System.DateTime)">
+            <summary>
+            获得两个日期的间隔
+            </summary>
+            <param name="DateTime1">日期一。</param>
+            <param name="DateTime2">日期二。</param>
+            <returns>日期间隔TimeSpan。</returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.FormatDate(System.DateTime,System.String)">
+            <summary>
+            格式化日期时间
+            </summary>
+            <param name="dateTime1">日期时间</param>
+            <param name="dateMode">显示模式</param>
+            <returns>0-9种模式的日期</returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetRandomTime(System.DateTime,System.DateTime)">
+            <summary>
+            得到随机日期
+            </summary>
+            <param name="time1">起始日期</param>
+            <param name="time2">结束日期</param>
+            <returns>间隔日期之间的 随机日期</returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.ParseToDateValue(System.String)">
+            <summary>
+            将String转换为DateTime?类型
+            </summary>
+            <param name="dateString"></param>
+            <returns>DateTime?</returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.ConvertObjectToNullableDate(System.Object)">
+             <summary>
+            2013-03-21废弃WWF,已有同样方法ParseToDateValue，为什么又添加一个？？？？？？ 
+             </summary>
+             <param name="obj"></param>
+             <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.FormatDateTime(System.DateTime,System.String)">
+            <summary>
+            指定的日期格式格式化日期
+            </summary>
+            <param name="dateValue">日期</param>
+            <param name="dataFormat">日期格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetYearsOfTwoDate(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            获取两个时间差：返回 年
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetMonthsOfTwoDate(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            获取两个时间差：返回 月
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetDaysOfTwoDate(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            获取两个时间差：返回 天
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetStartDateOfQuarter(System.Int32,System.Int32)">
+            <summary>
+            获取季度的开始日期
+            </summary>
+            <param name="year"></param>
+            <param name="quarter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetEndDateOfQuarter(System.Int32,System.Int32)">
+            <summary>
+            获取季度的结束日期
+            </summary>
+            <param name="year"></param>
+            <param name="quarter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetQuarter(System.DateTime)">
+            <summary>
+            获取日期对应的季度
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetStartDateOfMonth(System.Int32,System.Int32)">
+            <summary>
+            获取月份的开始日期
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetEndDateOfMonth(System.Int32,System.Int32)">
+            <summary>
+            获取月份的结束日期
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.GetWeekUpOfDate(System.DateTime,System.DayOfWeek,System.Int32)">
+             <summary>
+             获取当前日期第一个星期几是哪天
+            DateTime dt=getWeekUpOfDate(DateTime.Now,DayOfWeek.Monday,-1);
+             这是获取当前日期的上周一的日期
+             
+             DateTime dt=getWeekUpOfDate(DateTime.Now,DayOfWeek.Monday,-2);
+            这是获取当前日期的上上周一的日期
+            
+            DateTime dt=getWeekUpOfDate(DateTime.Now,DayOfWeek.Monday,1);
+            这是获取当前日期的下周一的日期
+            
+            DateTime dt=getWeekUpOfDate(DateTime.Now,DayOfWeek.Monday,0);
+            这是获取本周周一的日期
+             </summary>
+             <param name="dt"></param>
+             <param name="weekday"></param>
+             <param name="Number"></param>
+             <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.WeekOfMonth(System.DateTime,System.Int32)">
+            <summary>
+            获取日期是当月的第几周
+            </summary>
+            <param name="day"></param>
+            <param name="WeekStart">1表示 周一至周日 为一周 2表示 周日至周六 为一周</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.CompareCurrentQuarter(System.String,System.String,System.String)">
+            <summary>
+            比较计算年季是否大于当前年季
+            </summary>
+            <param name="year"></param>
+            <param name="quarter"></param>
+            <param name="seq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.MonthConvertToQuarter(System.Int32)">
+            <summary>
+            将月份转换成季度
+            </summary>
+            <param name="month">月份</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.IsBiggerCurrentDate(System.String,System.String,System.String)">
+            <summary>
+            计算届别+离开第几年，判读是否大于当前年月
+            </summary>
+            <param name="className">届别</param>
+            <param name="outSeq">工作第几年离开</param>
+            <param name="month">离开月份</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.TimeUtils.CompareCurrentYearMonth(System.String,System.String)">
+            <summary>
+            比较DataTale结果集中的年月是否大于当前年月
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SlothUtils.ValidatorHelper">
+            <summary>
+            各种验证帮助类
+            </summary>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsEmail(System.String)">
+            <summary>
+            验证邮箱
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsUrl(System.String)">
+            <summary>
+            验证网址
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsDateTime(System.String)">
+            <summary>
+            验证日期
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsMobile(System.String)">
+            <summary>
+            验证手机号
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsIP(System.String)">
+            <summary>
+            验证IP
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsIDCard(System.String)">
+            <summary>
+            验证身份证是否有效
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsInt(System.String)">
+            <summary>
+            是不是Int型的
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsLengthStr(System.String,System.Int32,System.Int32)">
+            <summary>
+            看字符串的长度是不是在限定数之间 一个中文为两个字符
+            </summary>
+            <param name="source">字符串</param>
+            <param name="begin">大于等于</param>
+            <param name="end">小于等于</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsTel(System.String)">
+            <summary>
+            是不是中国电话，格式010-85849685
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsPostCode(System.String)">
+            <summary>
+            邮政编码 6个数字
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsChinese(System.String)">
+            <summary>
+            中文
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsNormalChar(System.String)">
+            <summary>
+            验证是不是正常字符 字母，数字，下划线的组合
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.checkUserId(System.String)">
+            <summary>
+            验证用户名：必须以字母开头，可以包含字母、数字、“_”、“.”，至少5个字符
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsNumber(System.String)">
+            <summary>
+            判断字符串是否为数字
+            </summary>
+            <param name="str">待验证的字符窜</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsDecimal(System.String)">
+            <summary>
+            是否为数字型
+            </summary>
+            <param name="strNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsHanyu(System.String)">
+            <summary>
+            验证是否包含汉语
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.ValidatorHelper.IsHanyuAll(System.String)">
+            <summary>
+            验证是否全部汉语
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SlothUtils.VerifyCodeRand">
+            <summary>
+            验证码类
+            </summary>
+        </member>
+        <member name="M:SlothUtils.VerifyCodeRand.Number(System.Int32)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="length">生成长度</param>
+        </member>
+        <member name="M:SlothUtils.VerifyCodeRand.Number(System.Int32,System.Boolean)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+        </member>
+        <member name="M:SlothUtils.VerifyCodeRand.Str(System.Int32)">
+            <summary>
+            生成随机字母与数字
+            </summary>
+            <param name="IntStr">生成长度</param>
+        </member>
+        <member name="M:SlothUtils.VerifyCodeRand.Str(System.Int32,System.Boolean)">
+            <summary>
+            生成随机字母与数字
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+        </member>
+        <member name="M:SlothUtils.VerifyCodeRand.Str_char(System.Int32)">
+            <summary>
+            生成随机纯字母随机数
+            </summary>
+            <param name="IntStr">生成长度</param>
+        </member>
+        <member name="M:SlothUtils.VerifyCodeRand.Str_char(System.Int32,System.Boolean)">
+            <summary>
+            生成随机纯字母随机数
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+        </member>
+        <member name="T:SlothUtils.Watch">
+            <summary>
+            简易的计时类
+            </summary>
+        </member>
+        <member name="M:SlothUtils.XMLUtils.ReadXML``1(System.String)">
+            <summary>
+            Read XML 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlothUtils.XMLUtils.WriteXML``1(``0,System.String)">
+            <summary>
+            Save Data To XML
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <param name="sPath"></param>
+        </member>
+        <member name="T:Common.Utility.EcanConvertToCh">
+            <summary>
+            汉字转拼音类
+            </summary>
+        </member>
+        <member name="M:Common.Utility.EcanConvertToCh.convertCh(System.String)">
+            <summary>
+            汉字转换成全拼的拼音
+            </summary>
+            <param name="Chstr">汉字字符串</param>
+            <returns>转换后的拼音字符串</returns>
+        </member>
+        <member name="M:Common.Utility.PinYin.GetCodstring(System.String)">
+            <summary>
+            取汉字拼音的首字母
+            </summary>
+            <param name="UnName">汉字</param>
+            <returns>首字母</returns>
+        </member>
+    </members>
+</doc>

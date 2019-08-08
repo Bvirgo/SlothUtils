@@ -33,7 +33,7 @@ namespace SlothUtils
     }
 
     /// <summary>
-    /// 鼠标事件
+    /// 基于IMouseCtr接口的鼠标操作消息分发中心
     /// </summary>
     public class MouseManager : MonoSingleton<MouseManager>
     {
@@ -49,11 +49,6 @@ namespace SlothUtils
         }
         void OnMouseEvent(string eventType, IMouseCtrl tar, Vector2 screenPoint, Vector3 worldPoint, int mouse)
         {
-            //Debug.Log("eventType : " + eventType + "   tar : " + tar);
-            //Debug.Log("tar : " + tar);
-            //Debug.Log("screenPoint : " + screenPoint);
-            //Debug.Log("worldPoint : " + worldPoint);
-
             switch (eventType)
             {
                 case MouseEvent.MouseDown:
@@ -93,7 +88,7 @@ namespace SlothUtils
 
         void Update()
         {
-            if (!Utils.IsOnUI)
+            if (!U3DUtils.IsUI())
             {
                 CheckMouse();
             }
