@@ -63,16 +63,24 @@
     <Compile Include="HiDebuger\HiDebugView.cs" />
     <Compile Include="HiDebuger\LogInfo.cs" />
     <Compile Include="Interface\IMouseCtrl.cs" />
+    <Compile Include="Pool\IPoolable.cs" />
+    <Compile Include="Pool\LeanClassPool.cs" />
+    <Compile Include="Pool\LeanGameObjectPool.cs" />
+    <Compile Include="Pool\LeanHelper.cs" />
+    <Compile Include="Pool\LeanInspector.cs" />
+    <Compile Include="Pool\LeanPool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Random\MathRandom.cs" />
     <Compile Include="Singleton\MonoSingleton.cs" />
     <Compile Include="Singleton\Singleton.cs" />
     <Compile Include="Singleton\SingletonException.cs" />
     <Compile Include="Singleton\SingletonLite.cs" />
     <Compile Include="Utils\BoundsHelper.cs" />
     <Compile Include="Utils\CNDate.cs" />
+    <Compile Include="Utils\ConvertHelper.cs" />
+    <Compile Include="Utils\Extension.cs" />
     <Compile Include="Utils\Loom.cs" />
     <Compile Include="Utils\MemoryManager.cs" />
-    <Compile Include="Utils\MethodExpand.cs" />
     <Compile Include="Utils\FileUtils.cs" />
     <Compile Include="Utils\MiniEventManager.cs" />
     <Compile Include="Utils\MonoHelper.cs" />
@@ -90,6 +98,7 @@
     <Compile Include="Utils\Watch.cs" />
     <Compile Include="Utils\XMLUtils.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
