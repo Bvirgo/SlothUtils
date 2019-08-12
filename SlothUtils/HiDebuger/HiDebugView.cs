@@ -6,8 +6,8 @@ namespace SlothUtils
 {
     public class HiDebugView : MonoBehaviour
     {
-        private static float _buttonHeight = 0.1f;
-        private static float _buttonWidth = 0.2f;
+        private static float _buttonHeight = 0.05f;
+        private static float _buttonWidth = 0.1f;
         private EDisplay _eDisplay;
         private EMouse _eMouse;
         private bool _isErrorOn = true;

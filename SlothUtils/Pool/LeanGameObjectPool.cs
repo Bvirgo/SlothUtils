@@ -7,8 +7,8 @@ using UnityEditor;
 namespace SlothUtils.Pool
 {
 	[CanEditMultipleObjects]
-	[CustomEditor(typeof(LeanGameObjectPool))]
-	public class LeanGameObjectPool_Inspector : LeanInspector<LeanGameObjectPool>
+	[CustomEditor(typeof(SlothPool))]
+	public class LeanGameObjectPool_Inspector : LeanInspector<SlothPool>
 	{
 		protected override void DrawInspector()
 		{
@@ -35,11 +35,11 @@ namespace SlothUtils.Pool
 		[MenuItem("GameObject/Lean/Pool", false, 1)]
 		private static void CreateLocalization()
 		{
-			var gameObject = new GameObject(typeof(LeanGameObjectPool).Name);
+			var gameObject = new GameObject(typeof(SlothPool).Name);
 
 			Undo.RegisterCreatedObjectUndo(gameObject, "Create LeanGameObjectPool");
 
-			gameObject.AddComponent<LeanGameObjectPool>();
+			gameObject.AddComponent<SlothPool>();
 
 			Selection.activeGameObject = gameObject;
 		}

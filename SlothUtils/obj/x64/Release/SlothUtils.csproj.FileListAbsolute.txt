@@ -1,0 +1,8 @@
+G:\VSPro\DLLPro\SlothUtils_Git\SlothUtils\SlothUtils\bin\x64\Release\SlothUtils.dll
+G:\VSPro\DLLPro\SlothUtils_Git\SlothUtils\SlothUtils\bin\x64\Release\SlothUtils.pdb
+G:\VSPro\DLLPro\SlothUtils_Git\SlothUtils\SlothUtils\bin\x64\Release\SlothUtils.XML
+G:\VSPro\DLLPro\SlothUtils_Git\SlothUtils\SlothUtils\bin\x64\Release\UnityEditor.dll
+G:\VSPro\DLLPro\SlothUtils_Git\SlothUtils\SlothUtils\bin\x64\Release\UnityEngine.dll
+G:\VSPro\DLLPro\SlothUtils_Git\SlothUtils\SlothUtils\bin\x64\Release\UnityEngine.UI.dll
+G:\VSPro\DLLPro\SlothUtils_Git\SlothUtils\SlothUtils\obj\x64\Release\SlothUtils.dll
+G:\VSPro\DLLPro\SlothUtils_Git\SlothUtils\SlothUtils\obj\x64\Release\SlothUtils.pdb
