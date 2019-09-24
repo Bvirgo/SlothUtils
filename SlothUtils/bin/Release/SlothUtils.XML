@@ -263,6 +263,13 @@
             </summary>
             <param name="msg">Message.</param>
         </member>
+        <member name="T:SlothUtils.BiDictionary`2">
+            <summary>
+            双向字典：一 一映射
+            </summary>
+            <typeparam name="TFirst"></typeparam>
+            <typeparam name="TSecond"></typeparam>
+        </member>
         <member name="M:SlothUtils.BoundsHelper.GetBounds(System.Collections.Generic.List{UnityEngine.GameObject})">
             <summary>
             获取对象列表的外包围盒
@@ -1856,6 +1863,12 @@
             </summary>
             <param name="UnName">汉字</param>
             <returns>首字母</returns>
+        </member>
+        <member name="T:Example">
+            <summary>
+            Motion使用案例
+            链接：https://github.com/beinteractive/UrMotion
+            </summary>
         </member>
         <member name="T:Utilities.CNDate">
             <summary>
